@@ -1,48 +1,95 @@
-# Predição de Vendas com Machine Learning
+# 📈 Predição de Vendas com Machine Learning
 
-Este projeto utiliza Machine Learning para prever vendas com base em investimentos em TV, rádio e jornal. Ele treina dois modelos (Regressão Linear e Árvore de Decisão) e escolhe o melhor para fazer previsões futuras. Utilizado com fins didáticos para aprender sobre a computação no mercado financeiro e aprender a como desenvolver algoritmos de previsão.
+[![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-## 📂 Estrutura do Projeto
+Projeto de **Machine Learning** para prever vendas a partir do investimento em canais de propaganda (TV, Rádio e Jornal). Compara **Regressão Linear** e **Random Forest**, escolhe o melhor modelo e aplica previsões em novos cenários.
 
-- **src/model.py** - Código principal
+Ideal para estudos em ciência de dados, análise de impacto de mídia e introdução a pipelines de ML em Python.
 
-- **data/advertising.csv** - Conjunto de dados inicial
+---
 
-- **data/novos.csv** - Novos dados para previsão
+## 🎯 O que o projeto faz
 
-- **README.md** - Explicação do projeto
+- **Análise exploratória**: heatmap de correlação entre investimentos e vendas  
+- **Modelagem**: treinamento de Regressão Linear e Random Forest com divisão treino/teste  
+- **Avaliação**: comparação por R² e seleção automática do melhor modelo  
+- **Visualização**: gráficos salvos em `output/` (correlação e comparação de previsões)  
+- **Previsão**: aplicação do modelo escolhido em novos dados e export para CSV  
 
-- **requirements.txt** - Dependências necessárias
+---
 
-- **help.txt** - Explicação detalhada do código
+## 📂 Estrutura do repositório
 
-## 🚀 Como Executar
+```
+sales-prediction-ml/
+├── data/
+│   ├── advertising.csv   # Dados históricos (TV, Radio, Jornal, Vendas)
+│   └── novos.csv         # Novos cenários para previsão
+├── src/
+│   └── model.py          # Pipeline completo: treino, avaliação e previsão
+├── output/               # Gerado ao rodar (gráficos + previsões)
+├── docs/
+│   └── explicacao.md     # Passo a passo do código
+├── requirements.txt
+├── LICENSE
+└── README.md
+```
 
-1. Clone o repositório:
-    ```bash
-    git clone https://github.com/seu-usuario/nome-do-repositorio.git
-    ```
+---
 
-2. Instale as dependências:
-    ```bash
-    pip install -r requirements.txt
-    ```
+## 🚀 Como executar
 
-3. Execute o código:
-    ```bash
-    python src/model.py
-    ```
+**Pré-requisito:** Python 3.8 ou superior.
 
-## 📊 Tecnologias Utilizadas
+1. **Clonar o repositório**
+   ```bash
+   git clone https://github.com/JoseOtavioJunqueira/sales-prediction-ml.git
+   cd sales-prediction-ml
+   ```
 
-🔹Python
-🔹Pandas
-🔹Matplotlib
-🔹Seaborn
-🔹Scikit-Learn
+2. **Criar ambiente virtual (recomendado)**
+   ```bash
+   python -m venv venv
+   # Windows:
+   venv\Scripts\activate
+   # Linux/macOS:
+   source venv/bin/activate
+   ```
+
+3. **Instalar dependências**
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+4. **Rodar o pipeline**
+   ```bash
+   python src/model.py
+   ```
+
+Os gráficos e o CSV de previsões serão salvos na pasta `output/`.
+
+---
+
+## 📊 Tecnologias
+
+| Ferramenta        | Uso                          |
+|-------------------|------------------------------|
+| **Python**        | Linguagem base               |
+| **Pandas**        | Leitura e manipulação de dados |
+| **Matplotlib**    | Geração de gráficos          |
+| **Seaborn**       | Visualizações estatísticas   |
+| **Scikit-learn**  | Modelos e métricas de ML     |
+
+---
 
 ## 📜 Licença
-Este projeto está licenciado sob a licença MIT. Para mais detalhes, consulte o arquivo LICENSE.
 
-## Autor
-Criado por José Otávio Junqueira Ramos
+Este projeto está sob a licença **MIT**. Ver [LICENSE](LICENSE).
+
+---
+
+## 👤 Autor
+
+**José Otávio Junqueira Ramos**  
+Projeto desenvolvido com fins didáticos em Ciência de Dados e Machine Learning.
